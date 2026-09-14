@@ -68,7 +68,10 @@ player 1 throws dice. Depending on score, moves their pieces. Turn goes to playe
 ************
 
 * Knows: list of its pieces, its color, its state (won or not)
-* Does: agrees to roll dice when asked, picks which piece to move, tells controller and moves it to that position when asked
+* Does: 
+** // NO: agrees to roll dice when asked. No, player is not representing real human. So, its passive and not interacts with input or display
+** // NO: picks which piece to move
+** moves to a position when asked
 * Collab: none
 
 */
