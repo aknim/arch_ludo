@@ -3,5 +3,6 @@ public class Piece{
  private Cell position;
  private ColorEnum color;
 /*Does*/
- public void move(Cell newPos){}
+ public Piece(ColorEnum color, Cell position){this.position = position; this.color = color;}
+ public void move(Cell newPos){this.position = newPos;}
 }
