@@ -3,4 +3,5 @@ public class Cell{
  private ColorEnum color;
  public Cell(CellEnum type, ColorEnum color){this.type = type; this.color = color;}
  public CellEnum getType(){return type;}
+ public ColorEnum getColor(){return color;}
 }

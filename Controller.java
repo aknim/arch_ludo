@@ -5,7 +5,7 @@ public class Controller{
  private Player [] players;
  private Map map;
 
- public Controller(InputListener inp, DisplayPanel disp, Dice dice, Player [] players, Map map){
+ public Controller(Dice dice, DisplayPanel disp, InputListener inp, Map map, Player [] players){
  }
  public void start(){}
 }

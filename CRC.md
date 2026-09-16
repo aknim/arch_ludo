@@ -93,6 +93,7 @@ player 1 throws dice. Depending on score, moves their pieces. Turn goes to playe
 **********
 
 * Knows: Its type (yard, startingSpace, normalTrack, starSpace, homeColumn, homeTriangle)
+* Knows: Also its color
 * Does: 
 * Collab: none
 
