@@ -4,7 +4,7 @@ public class Composite{
   Map map = new Map(colors, numOfPiecesPerPlayer);
   InputListener inputListener = new InputListener();
   controller = new Controller(new Dice(diceFaces), 
-   new DisplayPanel(100, 100, inputListener, gameName),
+   new DisplayPanel(15, 15, inputListener, gameName),
    inputListener, 
    map,
    composePlayers(colors, map));

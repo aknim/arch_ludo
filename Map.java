@@ -25,10 +25,10 @@ public class Map{
   
   initiatePlayerStarts();
 
-  initiateCommonSections();
-
   initiateTrackStars();
   initiateTurningPoints();
+
+  initiateCommonSections();
 
   initiateHomeTriangles();
   initiateHomeColumns(); 
@@ -57,6 +57,7 @@ public class Map{
   commonSections = new ArrayList<HashMap<Cell, Cell>>();
   for(int i=0;i<givenColors.length;i++){
    Cell tmpCurr = playerStarts[i];
+   commonSections.add(new HashMap<Cell, Cell>()); 
    for(int j=1;j<=7;j++){
     Cell tmpNew = new Cell(CellEnum.NORMALSPACE, givenColors[i]);
     commonSections.get(i).put(tmpCurr, tmpNew); 
