@@ -6,6 +6,28 @@ $$$$$$$$$$$$$$$$$$
 4 colored home quadrants.
 Players take turns rolling a six-sided die, deploying tokens out of their yard, and marching them around a track to reach the home goal cell
 
+⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫
+⚫⬜⬜⬜⬜⬜⚫🔲⬜🔲⚫⬜⬜⬜⬜⬜⚫
+⚫⬜🟥⬜🟥⬜⚫🔲🟩💚⚫⬜🟩⬜🟩⬜⚫
+⚫⬜⬜⬜⬜⬜⚫⭐🟩🔲⚫⬜⬜⬜⬜⬜⚫
+⚫⬜🟥⬜🟥⬜⚫🔲🟩🔲⚫⬜🟩⬜🟩⬜⚫
+⚫⬜⬜⬜⬜⬜⚫🔲🟩🔲⚫⬜⬜⬜⬜⬜⚫
+⚫⚫⚫⚫⚫⚫⚫🔲🟩🔲⚫⚫⚫⚫⚫⚫⚫
+⚫🔲❤️ 🔲🔲🔲🔲↘️ ⬇️ ↙️ 🔲🔲🔲⭐🔲🔲⚫
+⚫⬜🟥🟥🟥🟥🟥➡️ 🏆⬅️ 🟨🟨🟨🟨🟨⬜⚫
+⚫🔲🔲⭐🔲🔲🔲↗️ ⬆️ ↖️ 🔲🔲🔲🔲💛🔲⚫
+⚫⚫⚫⚫⚫⚫⚫🔲🟦🔲⚫⚫⚫⚫⚫⚫⚫
+⚫⬜⬜⬜⬜⬜⚫🔲🟦🔲⚫⬜⬜⬜⬜⬜⚫
+⚫⬜🟦⬜🟦⬜⚫🔲🟦🔲⚫⬜🟨⬜🟨⬜⚫
+⚫⬜⬜⬜⬜⬜⚫🔲🟦⭐⚫⬜⬜⬜⬜⬜⚫
+⚫⬜🟦⬜🟦⬜⚫💙🟦🔲⚫⬜🟨⬜🟨⬜⚫
+⚫⬜⬜⬜⬜⬜⚫🔲⬜🔲⚫⬜⬜⬜⬜⬜⚫
+⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫
+
+⬜ 🟥 🟩 🟦 🟨 🔲 ♦️ 🔷 🔶 💙 ❤️ 💚 💛  🎲 ⚫🏆⭐
+↘️⬇️↙️↗️⬆️↖️
+🟢🔴🔵🟡
+
 */
 
 /*
@@ -127,7 +149,12 @@ player 1 throws dice. Depending on score, moves their pieces. Turn goes to playe
 ****************
 
 * Knows: Players, map, input, display, dice
-* Does: starts the game and prompts player 1 to throw dice. On each player's turn, prompts the player to throw dice. When user responds, it takes the input from the input. It then rolls the dice and asks user for which move it wants to move. Then it validates the move and tells the player that you can move that piece to that position. Player moves to that position that piece. Once that move has been made, controller checks, what state should game be in, and on basis of that decides next and can pass dice prompt to another player or same player.  
+* Does: starts the game and prompts player 1 to throw dice. 
+* Does: On each player's turn, prompts the player to throw dice. 
+* Does: When user responds, it takes the input from the input. 
+* Does: It then rolls the dice and asks user for which move it wants to move. 
+* Does: Then it validates the move and tells the player that you can move that piece to that position. Player moves to that position that piece. 
+* Does: Once that move has been made, controller checks, what state should game be in, and on basis of that decides next and can pass dice prompt to another player or same player.  
 * Collab: input, display, dice, players, map
 
 */
