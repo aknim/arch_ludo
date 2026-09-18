@@ -3,9 +3,9 @@ public class Controller{
  private DisplayPanel disp;
  private Dice dice;
  private Player [] players;
- private Map map;
+ private Map2D map;
 
- public Controller(Dice dice, DisplayPanel disp, InputListener inp, Map map, Player [] players){
+ public Controller(Dice dice, DisplayPanel disp, InputListener inp, Map2D map, Player [] players){
   this.dice = dice; this.disp = disp; this.inp = inp; this.map = map; this.players = players;
  }
  public void start(){
