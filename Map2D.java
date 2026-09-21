@@ -27,6 +27,19 @@ public class Map2D{
   j = 0; for(i=0;i<grid.length;i++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR);
   j = 16; for(i=0;i<grid.length;i++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR);
 
+   i=6; for(j=1;j<=6;j++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR); 
+   i=10; for(j=1;j<=6;j++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR);
+ 
+   i=6; for(j=10;j<=15;j++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR); 
+   i=10; for(j=10;j<=15;j++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR);
+
+ 
+   j=6; for(i=1;i<=6;i++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR); 
+   j=10; for(i=1;i<=6;i++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR);
+ 
+   j=6; for(i=10;i<=15;i++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR); 
+   j=10; for(i=10;i<=15;i++) grid[i][j] = new Cell(CellEnum.DEAD, ColorEnum.NOCOLOR); 
+
   // PlayerYards
   grid[2][2] =   new Cell(CellEnum.YARD, ColorEnum.RED); 
   grid[2][4] =   new Cell(CellEnum.YARD, ColorEnum.RED); 
@@ -50,14 +63,14 @@ public class Map2D{
 
   // CommonPaths
   i=7; for(j=1;j<=6;j++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.RED); grid[7][2] = new Cell(CellEnum.STARTSPACE, ColorEnum.RED);
-  i=7; for(j=10;j<=15;j++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.GREEN); grid[7][14] = new Cell(CellEnum.STARSPACE, ColorEnum.GREEN);
+  i=7; for(j=10;j<=15;j++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.GREEN); grid[7][13] = new Cell(CellEnum.STARSPACE, ColorEnum.GREEN);
   i=9; for(j=1;j<=6;j++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.BLUE); grid[9][3] = new Cell(CellEnum.STARSPACE, ColorEnum.BLUE);
-  i=9; for(j=10;j<=15;j++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.YELLOW); grid[9][15] = new Cell(CellEnum.STARTSPACE, ColorEnum.YELLOW);
+  i=9; for(j=10;j<=15;j++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.YELLOW); grid[9][14] = new Cell(CellEnum.STARTSPACE, ColorEnum.YELLOW);
 
   j=7; for(i=1;i<=6;i++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.RED); grid[3][7] = new Cell(CellEnum.STARSPACE, ColorEnum.RED);
-  j=7; for(i=10;i<=15;i++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.BLUE); grid[15][7] = new Cell(CellEnum.STARTSPACE, ColorEnum.BLUE);
+  j=7; for(i=10;i<=15;i++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.BLUE); grid[14][7] = new Cell(CellEnum.STARTSPACE, ColorEnum.BLUE);
   j=9; for(i=1;i<=6;i++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.GREEN); grid[2][9] = new Cell(CellEnum.STARTSPACE, ColorEnum.GREEN);
-  j=9; for(i=10;i<=15;i++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.YELLOW); grid[14][9] = new Cell(CellEnum.STARSPACE, ColorEnum.YELLOW);
+  j=9; for(i=10;i<=15;i++) grid[i][j] = new Cell(CellEnum.NORMALSPACE, ColorEnum.YELLOW); grid[13][9] = new Cell(CellEnum.STARSPACE, ColorEnum.YELLOW);
 
  // TurningPoints
   grid[8][1] = new Cell(CellEnum.TURNINGPOINT, ColorEnum.RED);
@@ -73,9 +86,9 @@ public class Map2D{
 
  // HomeTriangle
   grid[7][8] = new Cell(CellEnum.HOMETRIANGLE, ColorEnum.GREEN);
-  grid[9][8] = new Cell(CellEnum.TURNINGPOINT, ColorEnum.BLUE);
-  grid[8][7] = new Cell(CellEnum.TURNINGPOINT, ColorEnum.RED);
-  grid[8][9] = new Cell(CellEnum.TURNINGPOINT, ColorEnum.YELLOW);
+  grid[9][8] = new Cell(CellEnum.HOMETRIANGLE, ColorEnum.BLUE);
+  grid[8][7] = new Cell(CellEnum.HOMETRIANGLE, ColorEnum.RED);
+  grid[8][9] = new Cell(CellEnum.HOMETRIANGLE, ColorEnum.YELLOW);
 
  }
  public Cell getNextCell(int i, int j, ColorEnum playerColor){

@@ -15,10 +15,8 @@ public class Controller{
    for(;;i=(i+1)%l){
     Player currPlayer = players[i];
     ColorEnum playerColor = currPlayer.getColor();
-    System.out.println("Player "+ playerColor);
     String in = inp.giveUserIn();
     while(in==null){in = inp.giveUserIn();}
-    System.out.println("User In: "+in); 
    }
   } 
  }

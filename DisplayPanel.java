@@ -57,13 +57,49 @@ public class DisplayPanel extends JPanel{
      case ColorEnum.NOCOLOR: c = Color.WHITE; break;
     }
     if(cellType==CellEnum.YARD) fillYard(g, c, x, y);
+    else if(cellType==CellEnum.DEAD){fillDead(g, Color.GRAY, x, y);}
+    else if(cellType==CellEnum.NORMALSPACE){fillNormal(g, Color.WHITE, x, y);}
+    else if(cellType==CellEnum.STARTSPACE){fillStartSpace(g, c, x, y);}
+    else if(cellType==CellEnum.TURNINGPOINT){fillTurningPoint(g, Color.ORANGE, x, y);}
+    else if(cellType==CellEnum.HOMECOLUMN){fillHomeColumn(g, c, x, y);}
+    else if(cellType==CellEnum.HOMETRIANGLE){fillHomeTriangle(g, Color.PINK, x, y);}
+    else if(cellType==CellEnum.EMPTY){fillEmpty(g, Color.LIGHT_GRAY, x, y);}
    }
   }
+ }
+ private void fillStartSpace(Graphics g, Color c, int x, int y){
+  g.setColor(c); 
+  g.fillRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
+  g.setColor(Color.WHITE);
+  g.drawRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
+ }
+ private void fillEmpty(Graphics g, Color c, int x, int y){
+  g.setColor(c);
+  g.fillRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
+ }
+ private void fillHomeTriangle(Graphics g, Color c, int x, int y){
+  g.setColor(c);
+  g.fillRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
+ }
+ private void fillHomeColumn(Graphics g, Color c, int x, int y){
+  g.setColor(c);
+  g.fillRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
+ }
+ private void fillTurningPoint(Graphics g, Color c, int x, int y){
+  g.setColor(c);
+  g.fillRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
+ }
+private void fillNormal(Graphics g, Color c, int x, int y){
+  g.setColor(c);
+  g.fillRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
+ }
+ private void fillDead(Graphics g, Color c, int x, int y){
+  g.setColor(c);
+  g.fillRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
  }
  private void fillYard(Graphics g, Color c, int x, int y){
   g.setColor(c);
   g.fillRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
-  
  }
 /* private void fillYard(x, y){}
  private void fillYard(x, y){}
