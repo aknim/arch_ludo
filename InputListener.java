@@ -6,13 +6,16 @@ public class InputListener implements KeyListener{
  public String giveUserIn(){String ret = readUserIn; readUserIn = null; return ret; }
  @Override
  public void keyPressed(KeyEvent e){
+  System.out.println("DEBUG -> Code: " + e.getKeyCode() + " | Char: " + e.getKeyChar());
+  //char keyChar = e.getKeyChar();
+  //if (keyChar >= '1' && keyChar <='4'){readUserIn = String.valueOf(keyChar);}
   switch(e.getKeyCode()){
    case KeyEvent.VK_1 -> readUserIn = "1";
    case KeyEvent.VK_2 -> readUserIn = "2";
    case KeyEvent.VK_3 -> readUserIn = "3";
    case KeyEvent.VK_4 -> readUserIn = "4";
   }
-  System.out.println(readUserIn);
+  System.out.println("In: "+readUserIn);
  }
 
  @Override public void keyTyped(KeyEvent e){}

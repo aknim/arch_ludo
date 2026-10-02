@@ -9,6 +9,20 @@ public class Player{
   pieces = new Piece[4];
   for(int i=0;i<pieces.length;i++){pieces[i] = new Piece(color, yardCells[i]);}
  }
+ public Piece [] getPiecesCopies(){
+  Piece [] pieceCopies = new Piece[4];
+  for(int i=0;i<4;i++){pieceCopies[i] = new Piece(pieces[i]);}
+  return pieceCopies;
+ }
+ /*public int [][] getPiecesCoord(){
+  int [][] piecesCoords = new int[4][2];
+  for(int i=0;i<piecesCoords.length;i++){
+   int [] coord = pieces[i].getCoord();
+   piecesCoords[i][0] = coord[0];
+   piecesCoords[i][1] = coord[1];
+  }
+  return piecesCoords; 
+ }*/
  public ColorEnum getColor(){return this.color;}
  public String getState(){return this.state;}
  // Remember the player, does not represent real human
