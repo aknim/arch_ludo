@@ -8,6 +8,7 @@ public class DisplayPanel extends JPanel{
  private final int TILE_SIZE = 25; //25x25 pixels
  private final int gridWidth, gridHeight;
  private Cell [][] grid;
+ private Piece [] pieceCopies;  
  private String gameName;
  public DisplayPanel(Cell[][] grid, InputListener keyListener, String gameName){
   this.gridWidth = grid[0].length; this.gridHeight = grid.length; this.grid = grid; this.gameName = gameName;
@@ -31,8 +32,12 @@ public class DisplayPanel extends JPanel{
  /** 
   * Receives the new state from the controller and schedules a canvas redraw
  */
- public void updateGridFrame(Cell[][] freshGrid){
+ public void updateGridFrame(Cell[][] freshGrid, Piece [] pieceCopies){
   this.grid = freshGrid;
+  this.pieceCopies = pieceCopies;
+/*  for(int i=0;i<pieceCopies.length;i++){
+   System.out.println(i +" > "+ pieceCopies[i].getColor() + " "+pieceCopies[i].getCoord().getX() + " "+pieceCopies[i].getCoord().getY());
+  }*/
   this.repaint(); 
  }
 
@@ -66,6 +71,28 @@ public class DisplayPanel extends JPanel{
     else if(cellType==CellEnum.EMPTY){fillEmpty(g, Color.LIGHT_GRAY, x, y);}
    }
   }
+  if(pieceCopies==null) return; 
+  for(int a=0;a<pieceCopies.length;a++){
+   Color c = null;
+   Piece piece = pieceCopies[a];
+   if(piece==null) System.out.println("Piece is null");
+   switch(piece.getColor()){
+     case ColorEnum.GREEN: c = Color.GREEN; break;
+     case ColorEnum.RED: c = Color.RED; break;
+     case ColorEnum.YELLOW: c = Color.YELLOW; break;
+     case ColorEnum.BLUE: c = Color.BLUE; break;
+     case ColorEnum.NOCOLOR: c = Color.WHITE; break;
+    }
+    Coord coord = piece.getCoord();
+    fillPiece(g, c, coord.getX(), coord.getY());
+  }
+//    fillPiece(g, Color.MAGENTA, x, y); 
+ }
+ private void fillPiece(Graphics g, Color c, int x, int y){
+  g.setColor(Color.BLACK);
+  g.fillOval(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-1, TILE_SIZE-1); 
+  g.setColor(c);
+  g.fillOval(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE-3, TILE_SIZE-3); 
  }
  private void fillStartSpace(Graphics g, Color c, int x, int y){
   g.setColor(c); 
